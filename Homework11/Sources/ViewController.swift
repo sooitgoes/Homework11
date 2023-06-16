@@ -23,17 +23,30 @@ class ViewController: UIViewController {
 
     private lazy var loginField: UITextField = {
         let loginField = UITextField()
-        let icon = UIImage(systemName: "person")
+        let personIcon = UIImage(systemName: "person")
 
         loginField.placeholder = "keanureeves01"
         loginField.font = UIFont.systemFont(ofSize: 15)
-        loginField.textAlignment = .center
         loginField.backgroundColor = .white
         loginField.layer.cornerRadius = 25
-        loginField.setLeftIcon(icon ?? UIImage())
+        loginField.setLeftIcon(personIcon ?? UIImage())
         loginField.tintColor = .gray
         loginField.translatesAutoresizingMaskIntoConstraints = false
         return loginField
+    }()
+
+    private lazy var passwordField: UITextField = {
+        let passwordField = UITextField()
+        let lockIcon = UIImage(systemName: "lock.fill")
+
+        passwordField.placeholder = "Password"
+        passwordField.font = UIFont.systemFont(ofSize: 15)
+        passwordField.backgroundColor = .white
+        passwordField.layer.cornerRadius = 25
+        passwordField.setLeftIcon(lockIcon ?? UIImage())
+        passwordField.tintColor = .gray
+        passwordField.translatesAutoresizingMaskIntoConstraints = false
+        return passwordField
     }()
 
 
@@ -57,7 +70,7 @@ class ViewController: UIViewController {
     }
 
     private func setupHierarchy() {
-        view.addSubviews([login, loginField])
+        view.addSubviews([login, loginField, passwordField])
     }
 
     private func setupLayout() {
@@ -68,7 +81,13 @@ class ViewController: UIViewController {
             loginField.topAnchor.constraint(equalTo: login.bottomAnchor, constant: 50),
             loginField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
             loginField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
-            loginField.heightAnchor.constraint(equalToConstant: 50)
+            loginField.heightAnchor.constraint(equalToConstant: 50),
+
+            passwordField.topAnchor.constraint(equalTo: loginField.bottomAnchor, constant: 20),
+            passwordField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            passwordField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
+            passwordField.heightAnchor.constraint(equalToConstant: 50)
+
 
         ])
     }
