@@ -56,15 +56,39 @@
 		D10EFF1F2A3CA2B400E5644E /* Homework11 */ = {
 			isa = PBXGroup;
 			children = (
-				D10EFF202A3CA2B400E5644E /* AppDelegate.swift */,
-				D10EFF222A3CA2B400E5644E /* SceneDelegate.swift */,
-				D10EFF242A3CA2B400E5644E /* ViewController.swift */,
-				D10EFF262A3CA2B400E5644E /* Main.storyboard */,
-				D10EFF292A3CA2B600E5644E /* Assets.xcassets */,
-				D10EFF2B2A3CA2B600E5644E /* LaunchScreen.storyboard */,
-				D10EFF2E2A3CA2B600E5644E /* Info.plist */,
+				D10EFF362A3CA6DE00E5644E /* Sources */,
+				D10EFF352A3CA69C00E5644E /* App */,
+				D10EFF342A3CA63400E5644E /* Resources */,
 			);
 			path = Homework11;
+			sourceTree = "<group>";
+		};
+		D10EFF342A3CA63400E5644E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D10EFF292A3CA2B600E5644E /* Assets.xcassets */,
+				D10EFF2E2A3CA2B600E5644E /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D10EFF352A3CA69C00E5644E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D10EFF202A3CA2B400E5644E /* AppDelegate.swift */,
+				D10EFF222A3CA2B400E5644E /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D10EFF362A3CA6DE00E5644E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D10EFF242A3CA2B400E5644E /* ViewController.swift */,
+				D10EFF262A3CA2B400E5644E /* Main.storyboard */,
+				D10EFF2B2A3CA2B600E5644E /* LaunchScreen.storyboard */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +313,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6XZKA4BJLF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Homework11/Info.plist;
+				INFOPLIST_FILE = Homework11/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6XZKA4BJLF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Homework11/Info.plist;
+				INFOPLIST_FILE = Homework11/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
