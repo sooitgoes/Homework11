@@ -1,18 +1,24 @@
-//
-//  ViewController.swift
-//  Homework11
-//
-//  Created by Михаил Латий on 16.06.2023.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - UI Elements
+
+
+
+    // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
+
+    // MARK: - Setups
+
+
+    // MARK: - Actions
+
+
 
 
 }
