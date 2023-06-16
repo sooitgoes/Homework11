@@ -49,6 +49,22 @@ class ViewController: UIViewController {
         return passwordField
     }()
 
+    private lazy var loginButton: UIButton = {
+        let loginButton = UIButton(type: .system)
+        loginButton.setTitle("Login", for: .normal)
+        loginButton.backgroundColor = .systemBlue
+        loginButton.tintColor = .white
+        loginButton.layer.cornerRadius = 25
+        loginButton.layer.shadowColor = UIColor.black.cgColor
+        loginButton.layer.shadowOpacity = 0.3
+        loginButton.layer.shadowOffset = .zero
+        loginButton.layer.shadowRadius = 10
+        loginButton.layer.shouldRasterize = true
+        loginButton.layer.rasterizationScale = UIScreen.main.scale
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
+        return loginButton
+    }()
+
 
 
 
@@ -70,7 +86,7 @@ class ViewController: UIViewController {
     }
 
     private func setupHierarchy() {
-        view.addSubviews([login, loginField, passwordField])
+        view.addSubviews([login, loginField, passwordField, loginButton])
     }
 
     private func setupLayout() {
@@ -86,7 +102,12 @@ class ViewController: UIViewController {
             passwordField.topAnchor.constraint(equalTo: loginField.bottomAnchor, constant: 20),
             passwordField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
             passwordField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
-            passwordField.heightAnchor.constraint(equalToConstant: 50)
+            passwordField.heightAnchor.constraint(equalToConstant: 50),
+
+            loginButton.topAnchor.constraint(equalTo: passwordField.bottomAnchor, constant: 50),
+            loginButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            loginButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
+            loginButton.heightAnchor.constraint(equalToConstant: 50)
 
 
         ])
