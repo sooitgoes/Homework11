@@ -3,7 +3,6 @@ import UIKit
 class ViewController: UIViewController {
 
     // MARK: - UI Elements
-
     private lazy var gradient: CAGradientLayer = {
             let gradient = CAGradientLayer()
             gradient.frame = view.bounds
@@ -13,6 +12,15 @@ class ViewController: UIViewController {
             return gradient
         }()
 
+    private lazy var login: UILabel = {
+        let login = UILabel()
+        login.text = "Login"
+        login.textColor = .white
+        login.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
+        login.translatesAutoresizingMaskIntoConstraints = false
+        return login
+    }()
+
 
 
     // MARK: - Lifecycle
@@ -20,7 +28,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-
+        setupHierarchy()
+        setupLayout()
     }
 
     // MARK: - Setups
@@ -31,11 +40,15 @@ class ViewController: UIViewController {
     }
 
     private func setupHierarchy() {
-
+        view.addSubviews([login])
     }
 
     private func setupLayout() {
+        NSLayoutConstraint.activate([
+            login.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            login.centerYAnchor.constraint(equalTo: view.topAnchor, constant: 130)
 
+        ])
     }
 
 
