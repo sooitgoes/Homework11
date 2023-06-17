@@ -14,6 +14,7 @@
 		D10EFF2A2A3CA2B600E5644E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D10EFF292A3CA2B600E5644E /* Assets.xcassets */; };
 		D10EFF2D2A3CA2B600E5644E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10EFF2B2A3CA2B600E5644E /* LaunchScreen.storyboard */; };
 		D12D42AF2A3CCACF0055EC04 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12D42AE2A3CCACF0055EC04 /* UIView + Extensions.swift */; };
+		D1D08E232A3E496100E1218A /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D08E222A3E496100E1218A /* UIButton + Extension.swift */; };
 		D1DA897D2A3CD195008EA804 /* UITextField + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DA897C2A3CD195008EA804 /* UITextField + Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		D10EFF2C2A3CA2B600E5644E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D10EFF2E2A3CA2B600E5644E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D12D42AE2A3CCACF0055EC04 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
+		D1D08E222A3E496100E1218A /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		D1DA897C2A3CD195008EA804 /* UITextField + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 			children = (
 				D12D42AE2A3CCACF0055EC04 /* UIView + Extensions.swift */,
 				D1DA897C2A3CD195008EA804 /* UITextField + Extensions.swift */,
+				D1D08E222A3E496100E1218A /* UIButton + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				D10EFF252A3CA2B400E5644E /* ViewController.swift in Sources */,
 				D10EFF212A3CA2B400E5644E /* AppDelegate.swift in Sources */,
 				D10EFF232A3CA2B400E5644E /* SceneDelegate.swift in Sources */,
+				D1D08E232A3E496100E1218A /* UIButton + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
