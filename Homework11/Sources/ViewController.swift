@@ -66,6 +66,18 @@ class ViewController: UIViewController {
         return loginButton
     }()
 
+    private lazy var forgotPasswordButton: UIButton = {
+        let forgotPasswordButton = UIButton(type: .system)
+        forgotPasswordButton.setTitle("Forgot your password?", for: .normal)
+        forgotPasswordButton.setTitleColor(.white, for: .normal)
+        forgotPasswordButton.titleLabel?.font = .systemFont(ofSize: 12, weight: .bold)
+        forgotPasswordButton.backgroundColor = .clear
+        forgotPasswordButton.translatesAutoresizingMaskIntoConstraints = false
+        return forgotPasswordButton
+    }()
+
+
+
 
 
 
@@ -87,7 +99,13 @@ class ViewController: UIViewController {
     }
 
     private func setupHierarchy() {
-        view.addSubviews([login, loginField, passwordField, loginButton])
+        view.addSubviews([
+            login,
+            loginField,
+            passwordField,
+            loginButton,
+            forgotPasswordButton
+        ])
     }
 
     private func setupLayout() {
@@ -108,7 +126,14 @@ class ViewController: UIViewController {
             loginButton.topAnchor.constraint(equalTo: passwordField.bottomAnchor, constant: 50),
             loginButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
             loginButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
-            loginButton.heightAnchor.constraint(equalToConstant: 50)
+            loginButton.heightAnchor.constraint(equalToConstant: 50),
+
+            forgotPasswordButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
+            forgotPasswordButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            forgotPasswordButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
+
+
+
 
 
         ])
