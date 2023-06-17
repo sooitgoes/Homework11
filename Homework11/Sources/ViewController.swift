@@ -52,8 +52,9 @@ class ViewController: UIViewController {
     private lazy var loginButton: UIButton = {
         let loginButton = UIButton(type: .system)
         loginButton.setTitle("Login", for: .normal)
-        loginButton.backgroundColor = .systemBlue
-        loginButton.tintColor = .white
+        loginButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        loginButton.setTitleColor(.white, for: .normal)
+        loginButton.backgroundColor = UIColor(named: "purpleButton")
         loginButton.layer.cornerRadius = 25
         loginButton.layer.shadowColor = UIColor.black.cgColor
         loginButton.layer.shadowOpacity = 0.3
