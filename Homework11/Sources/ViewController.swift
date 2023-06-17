@@ -76,7 +76,27 @@ class ViewController: UIViewController {
         return forgotPasswordButton
     }()
 
+    private lazy var firstSeparator: UIView = {
+        let firstSeparator = UIView()
+        firstSeparator.backgroundColor = .lightGray
+        firstSeparator.layer.cornerRadius = 5
+        return firstSeparator
+    }()
 
+    private lazy var secondSeparator: UIView = {
+        let secondSeparator = UIView()
+        secondSeparator.backgroundColor = .lightGray
+        secondSeparator.layer.cornerRadius = 5
+        return secondSeparator
+    }()
+
+    private lazy var conectWithLabel: UILabel = {
+        let conectWithLabel = UILabel()
+        conectWithLabel.text = "or connect with"
+        conectWithLabel.textColor = .lightGray
+        conectWithLabel.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        return conectWithLabel
+    }()
 
 
 
@@ -129,8 +149,16 @@ class ViewController: UIViewController {
             loginButton.heightAnchor.constraint(equalToConstant: 50),
 
             forgotPasswordButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
-            forgotPasswordButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
-            forgotPasswordButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
+            forgotPasswordButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 55),
+            forgotPasswordButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -55),
+
+            firstSeparator.heightAnchor.constraint(equalToConstant: 2),
+            firstSeparator.widthAnchor.constraint(equalToConstant: 88),
+
+            secondSeparator.heightAnchor.constraint(equalToConstant: 2),
+            secondSeparator.widthAnchor.constraint(equalToConstant: 88)
+
+
 
 
 
