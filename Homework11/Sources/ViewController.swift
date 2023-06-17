@@ -98,6 +98,19 @@ class ViewController: UIViewController {
         return conectWithLabel
     }()
 
+    private lazy var connectWithStack: UIStackView = {
+        let connectWithStack = UIStackView()
+        connectWithStack.axis = .horizontal
+        connectWithStack.alignment = .center
+        connectWithStack.distribution = .equalCentering
+        connectWithStack.spacing = 10
+        connectWithStack.addArrangedSubview(firstSeparator)
+        connectWithStack.addArrangedSubview(conectWithLabel)
+        connectWithStack.addArrangedSubview(secondSeparator)
+        connectWithStack.translatesAutoresizingMaskIntoConstraints = false
+        return connectWithStack
+    }()
+
 
 
 
@@ -124,7 +137,8 @@ class ViewController: UIViewController {
             loginField,
             passwordField,
             loginButton,
-            forgotPasswordButton
+            forgotPasswordButton,
+            connectWithStack
         ])
     }
 
@@ -156,12 +170,11 @@ class ViewController: UIViewController {
             firstSeparator.widthAnchor.constraint(equalToConstant: 88),
 
             secondSeparator.heightAnchor.constraint(equalToConstant: 2),
-            secondSeparator.widthAnchor.constraint(equalToConstant: 88)
+            secondSeparator.widthAnchor.constraint(equalToConstant: 88),
 
-
-
-
-
+            connectWithStack.bottomAnchor.constraint(equalTo: forgotPasswordButton.bottomAnchor, constant: 200),
+            connectWithStack.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            connectWithStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50)
 
 
         ])
