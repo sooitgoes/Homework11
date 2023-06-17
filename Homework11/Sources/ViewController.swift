@@ -93,7 +93,7 @@ class ViewController: UIViewController {
     private lazy var conectWithLabel: UILabel = {
         let conectWithLabel = UILabel()
         conectWithLabel.text = "or connect with"
-        conectWithLabel.textColor = .lightGray
+        conectWithLabel.textColor = .gray
         conectWithLabel.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         return conectWithLabel
     }()
