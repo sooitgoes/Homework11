@@ -157,11 +157,34 @@ class ViewController: UIViewController {
         return facebookTwitterStack
     }()
 
+    private lazy var dontAccountButton: UIButton = {
+        let dontAccountButton = UIButton(type: .system)
+        dontAccountButton.setTitle("Dont have account?", for: .normal)
+        dontAccountButton.setTitleColor(.gray, for: .normal)
+        dontAccountButton.titleLabel?.font = .systemFont(ofSize: 12, weight: .bold)
+        dontAccountButton.backgroundColor = .clear
+        return dontAccountButton
+    }()
 
+    private lazy var signUpButton: UIButton = {
+        let signUpButton = UIButton(type: .system)
+        signUpButton.setTitle("Sign Up", for: .normal)
+        signUpButton.setTitleColor(.systemPurple, for: .normal)
+        signUpButton.titleLabel?.font = .systemFont(ofSize: 12, weight: .bold)
+        signUpButton.backgroundColor = .clear
+        return signUpButton
+    }()
 
-
-
-
+    private lazy var dontAccountSignUpStack: UIStackView = {
+        let dontAccountSignUpStack = UIStackView()
+        dontAccountSignUpStack.axis = .horizontal
+        dontAccountSignUpStack.alignment = .center
+        dontAccountSignUpStack.distribution = .fillProportionally
+        dontAccountSignUpStack.addArrangedSubview(dontAccountButton)
+        dontAccountSignUpStack.addArrangedSubview(signUpButton)
+        dontAccountSignUpStack.translatesAutoresizingMaskIntoConstraints = false
+        return dontAccountSignUpStack
+    }()
 
     // MARK: - Lifecycle
 
@@ -187,7 +210,8 @@ class ViewController: UIViewController {
             loginButton,
             forgotPasswordButton,
             connectWithStack,
-            facebookTwitterStack
+            facebookTwitterStack,
+            dontAccountSignUpStack
         ])
     }
 
@@ -219,7 +243,7 @@ class ViewController: UIViewController {
 
             secondSeparator.heightAnchor.constraint(equalToConstant: 2),
 
-            connectWithStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -190),
+            connectWithStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200),
             connectWithStack.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 45),
             connectWithStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -45),
 
@@ -229,9 +253,11 @@ class ViewController: UIViewController {
 
             facebookTwitterStack.topAnchor.constraint(equalTo: connectWithStack.bottomAnchor, constant: 30),
             facebookTwitterStack.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
-            facebookTwitterStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
+            facebookTwitterStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
 
-
+            dontAccountSignUpStack.topAnchor.constraint(equalTo: facebookTwitterStack.bottomAnchor, constant: 20),
+            dontAccountSignUpStack.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 75),
+            dontAccountSignUpStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -75)
         ])
     }
 }
