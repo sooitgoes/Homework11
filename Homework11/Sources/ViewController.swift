@@ -93,6 +93,7 @@ class ViewController: UIViewController {
     private lazy var conectWithLabel: UILabel = {
         let conectWithLabel = UILabel()
         conectWithLabel.text = "or connect with"
+        conectWithLabel.textAlignment = .center
         conectWithLabel.textColor = .gray
         conectWithLabel.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         return conectWithLabel
@@ -102,8 +103,7 @@ class ViewController: UIViewController {
         let connectWithStack = UIStackView()
         connectWithStack.axis = .horizontal
         connectWithStack.alignment = .center
-        connectWithStack.distribution = .equalCentering
-        connectWithStack.spacing = 10
+        connectWithStack.distribution = .fillEqually
         connectWithStack.addArrangedSubview(firstSeparator)
         connectWithStack.addArrangedSubview(conectWithLabel)
         connectWithStack.addArrangedSubview(secondSeparator)
@@ -167,14 +167,12 @@ class ViewController: UIViewController {
             forgotPasswordButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -55),
 
             firstSeparator.heightAnchor.constraint(equalToConstant: 2),
-            firstSeparator.widthAnchor.constraint(equalToConstant: 88),
 
             secondSeparator.heightAnchor.constraint(equalToConstant: 2),
-            secondSeparator.widthAnchor.constraint(equalToConstant: 88),
 
-            connectWithStack.bottomAnchor.constraint(equalTo: forgotPasswordButton.bottomAnchor, constant: 200),
-            connectWithStack.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
-            connectWithStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50)
+            connectWithStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -170),
+            connectWithStack.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 45),
+            connectWithStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -45)
 
 
         ])
