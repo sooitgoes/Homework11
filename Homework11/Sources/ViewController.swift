@@ -24,12 +24,14 @@ class ViewController: UIViewController {
     private lazy var loginField: UITextField = {
         let loginField = UITextField()
         let personIcon = UIImage(systemName: "person")
+        let checkIcon = UIImage(named: "check")
 
         loginField.placeholder = "keanureeves01"
         loginField.font = UIFont.systemFont(ofSize: 15)
         loginField.backgroundColor = .white
         loginField.layer.cornerRadius = 25
         loginField.setLeftIcon(personIcon ?? UIImage())
+        loginField.setRightIcon(checkIcon ?? UIImage())
         loginField.tintColor = .gray
         loginField.translatesAutoresizingMaskIntoConstraints = false
         return loginField
