@@ -212,8 +212,8 @@ class ViewController: UIViewController {
             loginButton.heightAnchor.constraint(equalToConstant: 50),
 
             forgotPasswordButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
-            forgotPasswordButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 55),
-            forgotPasswordButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -55),
+            forgotPasswordButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 110),
+            forgotPasswordButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -110),
 
             firstSeparator.heightAnchor.constraint(equalToConstant: 2),
 
