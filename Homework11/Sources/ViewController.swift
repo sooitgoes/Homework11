@@ -111,6 +111,42 @@ class ViewController: UIViewController {
         return connectWithStack
     }()
 
+    private lazy var facebookButton: UIButton = {
+        let facebookButton = UIButton()
+        facebookButton.setTitle("Facebook", for: .normal)
+        facebookButton.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        facebookButton.setTitleColor(.white, for: .normal)
+        facebookButton.backgroundColor = .systemBlue
+        facebookButton.layer.cornerRadius = 20
+        facebookButton.layer.shadowColor = UIColor.black.cgColor
+        facebookButton.layer.shadowOpacity = 0.3
+        facebookButton.layer.shadowOffset = .zero
+        facebookButton.layer.shadowRadius = 10
+        facebookButton.layer.shouldRasterize = true
+        facebookButton.layer.rasterizationScale = UIScreen.main.scale
+        facebookButton.addRightImage(image: UIImage(named: "facebook") ?? UIImage(), offset: 100)
+        facebookButton.translatesAutoresizingMaskIntoConstraints = false
+        return facebookButton
+    }()
+
+    private lazy var twitterButton: UIButton = {
+        let twitterButton = UIButton()
+        twitterButton.setTitle("Twitter", for: .normal)
+        twitterButton.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        twitterButton.setTitleColor(.white, for: .normal)
+        twitterButton.backgroundColor = .purple
+        twitterButton.layer.cornerRadius = 20
+        twitterButton.layer.shadowColor = UIColor.black.cgColor
+        twitterButton.layer.shadowOpacity = 0.3
+        twitterButton.layer.shadowOffset = .zero
+        twitterButton.layer.shadowRadius = 10
+        twitterButton.layer.shouldRasterize = true
+        twitterButton.layer.rasterizationScale = UIScreen.main.scale
+        twitterButton.addRightImage(image: UIImage(named: "twitter") ?? UIImage(), offset: 100)
+        twitterButton.translatesAutoresizingMaskIntoConstraints = false
+        return twitterButton
+    }()
+
 
 
 
@@ -170,7 +206,7 @@ class ViewController: UIViewController {
 
             secondSeparator.heightAnchor.constraint(equalToConstant: 2),
 
-            connectWithStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -170),
+            connectWithStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -190),
             connectWithStack.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 45),
             connectWithStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -45)
 
