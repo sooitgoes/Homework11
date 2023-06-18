@@ -124,8 +124,7 @@ class ViewController: UIViewController {
         facebookButton.layer.shadowRadius = 10
         facebookButton.layer.shouldRasterize = true
         facebookButton.layer.rasterizationScale = UIScreen.main.scale
-        facebookButton.addRightImage(image: UIImage(named: "facebook") ?? UIImage(), offset: 100)
-        facebookButton.translatesAutoresizingMaskIntoConstraints = false
+        facebookButton.addLeftImage(image: UIImage(named: "facebook") ?? UIImage(), offset: 45)
         return facebookButton
     }()
 
@@ -142,10 +141,23 @@ class ViewController: UIViewController {
         twitterButton.layer.shadowRadius = 10
         twitterButton.layer.shouldRasterize = true
         twitterButton.layer.rasterizationScale = UIScreen.main.scale
-        twitterButton.addRightImage(image: UIImage(named: "twitter") ?? UIImage(), offset: 100)
-        twitterButton.translatesAutoresizingMaskIntoConstraints = false
+        twitterButton.addLeftImage(image: UIImage(named: "twitter") ?? UIImage(), offset: 45)
         return twitterButton
     }()
+
+    private lazy var facebookTwitterStack: UIStackView = {
+        let facebookTwitterStack = UIStackView()
+        facebookTwitterStack.axis = .horizontal
+        facebookTwitterStack.alignment = .center
+        facebookTwitterStack.distribution = .fillEqually
+        facebookTwitterStack.spacing = 15
+        facebookTwitterStack.addArrangedSubview(facebookButton)
+        facebookTwitterStack.addArrangedSubview(twitterButton)
+        facebookTwitterStack.translatesAutoresizingMaskIntoConstraints = false
+        return facebookTwitterStack
+    }()
+
+
 
 
 
@@ -174,14 +186,15 @@ class ViewController: UIViewController {
             passwordField,
             loginButton,
             forgotPasswordButton,
-            connectWithStack
+            connectWithStack,
+            facebookTwitterStack
         ])
     }
 
     private func setupLayout() {
         NSLayoutConstraint.activate([
             login.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            login.centerYAnchor.constraint(equalTo: view.topAnchor, constant: 130),
+            login.centerYAnchor.constraint(equalTo: view.topAnchor, constant: 110),
 
             loginField.topAnchor.constraint(equalTo: login.bottomAnchor, constant: 50),
             loginField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
@@ -208,17 +221,18 @@ class ViewController: UIViewController {
 
             connectWithStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -190),
             connectWithStack.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 45),
-            connectWithStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -45)
+            connectWithStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -45),
+
+            facebookButton.heightAnchor.constraint(equalToConstant: 40),
+
+            twitterButton.heightAnchor.constraint(equalToConstant: 40),
+
+            facebookTwitterStack.topAnchor.constraint(equalTo: connectWithStack.bottomAnchor, constant: 30),
+            facebookTwitterStack.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
+            facebookTwitterStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
 
 
         ])
     }
-
-
-    // MARK: - Actions
-
-
-
-
 }
 
